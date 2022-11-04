@@ -16,18 +16,17 @@
           placeholder="Title of your coffe"
         />
         <button
-          @click="search"
           class="w-1/4 h-12 inline-flex justify-center items-center bg-indigo-300 rounded-r-full"
         >
           <Icon icon="akar-icons:search" class="w-7 h-7 text-indigo-700" />
         </button>
       </div>
     </div>
-    <ListCoffee :list="data" v-if="data" />
+    <ListCoffee :list="filteredData" v-if="data" />
   </main>
 </template>
 <script setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import { Icon } from "@iconify/vue";
 import ListCoffee from "../components/ListCoffee.vue";
 const input = ref("");
@@ -39,7 +38,9 @@ const data = ref([
   { title: "Moccacino", url: "./moccacino.jpg" },
   { title: "Ristreto", url: "./ristreto.jpg" },
 ]);
-const search = async () => {
-  console.log(input.value);
-};
+const filteredData = computed(() => {
+  return data.value.filter((coffee) =>
+    coffee.title.toLowerCase().includes(input.value.toLowerCase())
+  );
+});
 </script>
