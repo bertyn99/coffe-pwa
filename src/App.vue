@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-orange-100">
+  <div class="min-h-screen bg-indigo-100">
     <nav class="flex justify-around py-4">
       <router-link to="/" v-if="showBackButton"
         ><svg

@@ -4,10 +4,10 @@
       class="grid grid-cols-1 gap-2 md:grid-cols-4 md:gap-4"
       v-if="props.list !== null"
     >
-      <CardCoffe
+      <CardCoffee
         v-for="coffee in props.list"
-        :key="coffee.id"
-        :coffee="movie"
+        :key="coffee.title"
+        :coffee="coffee"
       />
     </div>
   </section>

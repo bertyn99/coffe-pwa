@@ -1,5 +1,5 @@
 <template>
-  <RouterLink :to="`/coffee/${coffee.id}`">
+  <RouterLink :to="`/coffee/${coffee.title}`">
     <article class="w-full h-64 rounded-md overflow-hidden relative">
       <img
         :src="props.coffee.url"

@@ -1,9 +1,9 @@
 <template>
   <main class="container px-6 mx-auto flex flex-col justify-center py-8">
     <h1
-      class="text-5xl md:text-6xl font-bold font-sans text-orange-900 inline-flex items-center justify-center mb-8"
+      class="text-5xl md:text-6xl font-bold font-sans text-indigo-900 inline-flex items-center justify-center mb-8"
     >
-      <Icon icon="icon-park-twotone:movie" /><span>Movie Finder</span>
+      <Icon icon="bx:coffee-togo" /><span>Maker</span>
     </h1>
     <div class="flex justify-center mb-10">
       <div class="flex w-2/3 h-12 mt-1">
@@ -17,9 +17,9 @@
         />
         <button
           @click="search"
-          class="w-1/4 h-12 inline-flex justify-center items-center bg-orange-300 rounded-r-full"
+          class="w-1/4 h-12 inline-flex justify-center items-center bg-indigo-300 rounded-r-full"
         >
-          <Icon icon="akar-icons:search" class="w-7 h-7 text-orange-700" />
+          <Icon icon="akar-icons:search" class="w-7 h-7 text-indigo-700" />
         </button>
       </div>
     </div>
@@ -31,7 +31,14 @@ import { ref } from "vue";
 import { Icon } from "@iconify/vue";
 import ListCoffee from "../components/ListCoffee.vue";
 const input = ref("");
-const data = ref(null);
+const data = ref([
+  { title: "Expresso", url: "./expresso.jpg" },
+  { title: "Macciato", url: "./macchiato.jpg" },
+  { title: "Americano", url: "./americano.jpg" },
+  { title: "Cortado", url: "./cortado.webp" },
+  { title: "Moccacino", url: "./moccacino.jpg" },
+  { title: "Ristreto", url: "./ristreto.jpg" },
+]);
 const search = async () => {
   console.log(input.value);
 };
