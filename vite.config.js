@@ -8,22 +8,19 @@ export default defineConfig({
     VitePWA({
       registerType: "autoUpdate",
       injectRegister: "auto",
-      includeAssets: [],
+      includeAssets: ["coffe.svg"],
       manifest: {
-        name: "My Awesome App",
-        short_name: "MyApp",
-        description: "My Awesome App description",
-        theme_color: "#ffffff",
+        name: "Coffe Maker",
+        short_name: "Coffe Maker",
+        description: "Learn about how to make a good coffee",
+        theme_color: "#312e81",
+        background_color: "#e0e7ff",
         icons: [
           {
-            src: "pwa-192x192.png",
-            sizes: "192x192",
-            type: "image/png",
-          },
-          {
-            src: "pwa-512x512.png",
-            sizes: "512x512",
-            type: "image/png",
+            src: "coffe.svg",
+            sizes: "48x48 72x72 96x96 128x128 256x256 512x512",
+            purpose: "any",
+            type: "image/svg+xml",
           },
         ],
       },
